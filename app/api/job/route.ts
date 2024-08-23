@@ -12,6 +12,6 @@ export async function GET() {
       status: 200,
     });
   } catch (error) {
-    console.log(error);
+    throw new Error('something went wrong!')
   }
 }
