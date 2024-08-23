@@ -3,7 +3,7 @@ import { Job } from " @/model/job.model";
 
 export async function GET() {
   try {
-    // await dbConnect();
+    await dbConnect();
     // const job = await Job.find({});
 
     return Response.json({
