@@ -7,6 +7,6 @@ export async function GET() {
     const jobs = await Job.find({});
     return Response.json(jobs);
   } catch (error) {
-    throw new Error("something went wrong!");
+    throw new Error("Cannot get jobs!");
   }
 }
