@@ -5,11 +5,7 @@ export async function GET() {
   try {
     await dbConnect();
     const jobs = await Job.find({});
-    return Response.json({
-      data: jobs,
-      message: "success",
-      status: 200,
-    });
+    return Response.json(jobs);
   } catch (error) {
     throw new Error("something went wrong!");
   }
