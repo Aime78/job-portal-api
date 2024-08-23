@@ -1,5 +1,5 @@
-import dbConnect from " @/app/db/connectionDB";
-import { Job } from " @/app/model/job.model";
+import dbConnect from " @/db/connectionDB";
+import { Job } from " @/model/job.model";
 
 export async function GET() {
   try {
@@ -11,7 +11,6 @@ export async function GET() {
       message: "success",
       status: 200,
     });
-    
   } catch (error) {
     console.log(error);
   }
