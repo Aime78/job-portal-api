@@ -4,9 +4,9 @@ import { Job } from " @/model/job.model";
 export async function GET() {
   try {
     await dbConnect();
-
+    const jobs = await Job.find({});
     return Response.json({
-      data: [],
+      data: jobs,
       message: "success",
       status: 200,
     });
